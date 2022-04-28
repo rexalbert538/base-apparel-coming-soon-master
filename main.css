@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --primary__clr: hsl(0, 36%, 70%);
+  --primary__clr-light: hsl(0, 93%, 68%);
+  --neural-clr: hsl(0, 6%, 24%);
+
+  --gradient__light: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --gradient__neutral: linear-gradient(
+    134deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 110%;
+  font-weight: 400;
+  color: var(--primary__clr);
+  text-align: center;
+  background-image: var(--gradient__light);
+}
+
+h1,
+p {
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.header,
+.main {
+  padding: calc(100px - 3.5em);
+}
+
+.header__logo img {
+  width: 150px;
+  cursor: pointer;
+}
+
+.img-container {
+  background-image: url(./images/hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.main__title {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.main__title span {
+  font-weight: 600;
+  color: var(--neural-clr);
+}
+
+.form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form img {
+  width: 20px;
+}
+
+.form .form__input {
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bolder;
+  border: 1px solid var(--primary__clr);
+  border-radius: 25px;
+  margin-top: 15px;
+}
+
+.form.error .form__input {
+  border: 1px solid var(--primary__clr-light);
+}
+
+/* .error {
+  border: 1px solid var(--primary__clr-light);
+} */
+
+.form .form__input::placeholder {
+  color: var(--primary__clr);
+}
+
+.form .form__error {
+  position: absolute;
+  top: 30px;
+  right: 70px;
+}
+
+.form .form__btn {
+  position: absolute;
+  top: 15.5px;
+  right: 0;
+  width: 60px;
+  padding: 17px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0px 15px 25px var(--primary__clr);
+  background-image: var(--gradient__neutral);
+  transition: ease-in-out 250ms;
+}
+
+.form .form__btn:hover {
+  opacity: 0.8;
+}
+
+.form__btn img {
+  width: 10px;
+  margin: auto;
+}
+
+.error__msg {
+  color: var(--primary__clr-light);
+  text-align: left;
+  font-size: 0.8rem;
+  margin-left: 16px;
+  margin-bottom: 4em;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  body {
+    text-align: left;
+  }
+
+  .bg {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 180px auto;
+  }
+
+  .header,
+  .main {
+    padding: 4rem 10rem;
+  }
+
+  .main__title {
+    font-size: 5.9rem;
+  }
+
+  .main__text {
+    max-width: 500px;
+  }
+
+  .img-container {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 100vh;
+    background-image: url(./images/hero-desktop.jpg);
+    margin-bottom: 0;
+  }
+
+  .form {
+    max-width: 500px;
+  }
+
+  .form .form__error {
+    right: 100px;
+  }
+
+  .form .form__btn {
+    width: 80px;
+  }
+}
