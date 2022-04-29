@@ -132,11 +132,9 @@ img {
   box-shadow: 0px 15px 25px var(--primary__clr);
   background-image: var(--gradient__neutral);
   transition: ease-in-out 250ms;
+  z-index: 3;
 }
 
-.form .form__btn:hover {
-  opacity: 0.8;
-}
 
 .form__btn img {
   width: 10px;
@@ -208,4 +206,9 @@ img {
   .form .form__btn {
     width: 80px;
   }
+  
+  .form .form__btn:hover {
+  opacity: 0.8;
+}
+
 }
