@@ -33,6 +33,10 @@ body {
   background-image: var(--gradient__light);
 }
 
+.margin {
+  margin-bottom: 10em;
+}
+
 h1,
 p {
   line-height: 1.6;
@@ -69,7 +73,7 @@ img {
 .main__title {
   font-size: 3rem;
   font-weight: 300;
-  letter-spacing: 10px;
+  letter-spacing: 15px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -123,10 +127,10 @@ img {
 
 .form .form__btn {
   position: absolute;
-  top: 15.5px;
+  top: 15px;
   right: 0;
   width: 60px;
-  padding: 17px;
+  padding: 18px;
   border-radius: 25px;
   border: none;
   box-shadow: 0px 15px 25px var(--primary__clr);
@@ -134,7 +138,6 @@ img {
   transition: ease-in-out 250ms;
   z-index: 3;
 }
-
 
 .form__btn img {
   width: 10px;
@@ -146,7 +149,6 @@ img {
   text-align: left;
   font-size: 0.8rem;
   margin-left: 16px;
-  margin-bottom: 4em;
 }
 
 .hidden {
@@ -180,7 +182,8 @@ img {
   }
 
   .main__title {
-    font-size: 5.9rem;
+    font-size: 4rem;
+    max-width: 400px;
   }
 
   .main__text {
@@ -200,15 +203,14 @@ img {
   }
 
   .form .form__error {
-    right: 100px;
+    right: 130px;
   }
 
   .form .form__btn {
-    width: 80px;
+    width: 100px;
   }
-  
-  .form .form__btn:hover {
-  opacity: 0.8;
-}
 
+  .form .form__btn:hover {
+    opacity: 0.8;
+  }
 }
